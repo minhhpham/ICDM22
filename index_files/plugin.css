@@ -1,0 +1,46 @@
+.nav li.et-hover > ul {
+	visibility: visible;
+	opacity: 1; /* Necessary for tabbing through the primary top nav - Divi only has .et-hover containing visibility. */
+}
+*:active.keyboard-outline,
+*:focus.keyboard-outline {
+	outline: #2ea3f2 auto 5px;
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+.et-search-form input:focus.keyboard-outline {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* Text meant only for screen readers. */
+.dtn-screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	text-shadow: none;
+	text-transform: none;
+	letter-spacing: normal;
+	line-height: normal;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+.dtn-screen-reader-text:focus {
+	background: #f1f1f1;
+	color: #0073aa;
+	outline: 0;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	clip: auto !important;
+	display: block;
+	height: auto;
+	left: 5px;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 7px;
+	width: auto;
+	z-index: 1000000; /* Above WP toolbar. */
+}
