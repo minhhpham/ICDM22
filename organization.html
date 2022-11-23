@@ -5,38 +5,38 @@
 
 	<script>
 		function includeHTML() {
-		  var z, i, elmnt, file, xhttp;
-		  /* Loop through a collection of all HTML elements: */
-		  z = document.getElementsByTagName("*");
-		  for (i = 0; i < z.length; i++) {
-			elmnt = z[i];
-			/*search for elements with a certain atrribute:*/
-			file = elmnt.getAttribute("w3-include-html");
-			if (file) {
-			  /* Make an HTTP request using the attribute value as the file name: */
-			  xhttp = new XMLHttpRequest();
-			  xhttp.onreadystatechange = function() {
-				if (this.readyState == 4) {
-				  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-				  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-				  /* Remove the attribute, and call this function once more: */
-				  elmnt.removeAttribute("w3-include-html");
-				  includeHTML();
+			var z, i, elmnt, file, xhttp;
+			/* Loop through a collection of all HTML elements: */
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain atrribute:*/
+				file = elmnt.getAttribute("w3-include-html");
+				if (file) {
+					/* Make an HTTP request using the attribute value as the file name: */
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4) {
+							if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+							if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("w3-include-html");
+							includeHTML();
+						}
+					}
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					/* Exit the function: */
+					return;
 				}
-			  }
-			  xhttp.open("GET", file, true);
-			  xhttp.send();
-			  /* Exit the function: */
-			  return;
 			}
-		  }
 		}
 	</script>
-	
+
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
-	
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<link rel="canonical" href="./organization/">
@@ -55,11 +55,9 @@
 		let jqueryParams = [], jQuery = function (r) { return jqueryParams = [...jqueryParams, r], jQuery }, $ = function (r) { return jqueryParams = [...jqueryParams, r], $ }; window.jQuery = jQuery, window.$ = jQuery; let customHeadScripts = !1; jQuery.fn = jQuery.prototype = {}, $.fn = jQuery.prototype = {}, jQuery.noConflict = function (r) { if (window.jQuery) return jQuery = window.jQuery, $ = window.jQuery, customHeadScripts = !0, jQuery.noConflict }, jQuery.ready = function (r) { jqueryParams = [...jqueryParams, r] }, $.ready = function (r) { jqueryParams = [...jqueryParams, r] }, jQuery.load = function (r) { jqueryParams = [...jqueryParams, r] }, $.load = function (r) { jqueryParams = [...jqueryParams, r] }, jQuery.fn.ready = function (r) { jqueryParams = [...jqueryParams, r] }, $.fn.ready = function (r) { jqueryParams = [...jqueryParams, r] };</script>
 	<link rel="dns-prefetch" href="https://au.files.campus.edublogs.org.s3.amazonaws.com/">
 	<link rel="alternate" type="application/rss+xml"
-		title="IEEE International Conference on Data Mining 2021 (ICDM2021) » Feed"
-		href="./feed/">
+		title="IEEE International Conference on Data Mining 2021 (ICDM2021) » Feed" href="./feed/">
 	<link rel="alternate" type="application/rss+xml"
-		title="IEEE International Conference on Data Mining 2021 (ICDM2021) » Comments Feed"
-		href="./comments/feed/">
+		title="IEEE International Conference on Data Mining 2021 (ICDM2021) » Comments Feed" href="./comments/feed/">
 	<meta content="Divi v.4.10.5" name="generator">
 	<link rel="stylesheet" id="formidable-css" href="./organization_files/saved_resource" type="text/css" media="all">
 	<style id="formidable-inline-css" type="text/css">
@@ -174,8 +172,7 @@
 	<link rel="shortlink" href="./?p=27">
 	<style id="simpler-css-style" type="text/css">
 	</style><!-- end of custom css -->
-	<link rel="sitemap" type="application/xml" title="Sitemap"
-		href="./?dynamic-sitemap=1">
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="./?dynamic-sitemap=1">
 	<script type="text/javascript">document.documentElement.className += " js";</script>
 	<link rel="shortcut icon" href="shared/USF_icon.png">
 	<script type="text/javascript">
@@ -858,9 +855,8 @@
 
 <body
 	class="page-template-default page page-id-27 et_divi_builder et_pb_button_helper_class et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_expand et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns2 et_cover_background et_pb_gutter linux et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db chrome">
-	<a href="./organization/#main-content" class="skip-link da11y-screen-reader-text"
-		role="link">Skip to content</a><a href="./organization/#main-content"
-		class="skip-link dtn-screen-reader-text" role="link">Skip to content</a>
+	<a href="./organization/#main-content" class="skip-link da11y-screen-reader-text" role="link">Skip to content</a><a
+		href="./organization/#main-content" class="skip-link dtn-screen-reader-text" role="link">Skip to content</a>
 	<div id="page-container" class="et-animated-content" style="padding-top: 113px; margin-top: -1px;">
 
 
@@ -876,13 +872,13 @@
 							data-height-percentage="30" data-actual-width="1524" data-actual-height="500.925">
 					</a>
 				</div>
-				
+
 				<!-- navbar is included from navbar.html -->
 				<div id="navbar-included" w3-include-html="navbar.v19.html"></div>
 				<!-- include navbar from navbar.html -->
 				<script>
 					includeHTML();
-				</script>	
+				</script>
 
 			</div>
 			<!-- <div class="et_search_outer">
@@ -960,8 +956,9 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
-															src="./people/MyTThai.jpg"
-															alt="My T. Thai" class="wp-image-632"></div>
+															src="./people/MyTThai.jpg" alt="My T. Thai"
+															class="wp-image-632">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">My T. Thai</h4>
 
@@ -983,8 +980,9 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="190"
-															src="./people/TakashiWashio.jpg"
-															alt="Takashi Washio" class="wp-image-633"></div>
+															src="./people/TakashiWashio.jpg" alt="Takashi Washio"
+															class="wp-image-633">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">Takashi Washio</h4>
 
@@ -1032,10 +1030,8 @@
 
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
-														<img width="200" height="200"
-															src="./people/XingquanZhu.jpg"
-															alt="Xingquan (Hill) Zhu"
-														>
+														<img width="200" height="200" src="./people/XingquanZhu.jpg"
+															alt="Xingquan (Hill) Zhu">
 													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">Xingquan (Hill) Zhu</h4>
@@ -1053,10 +1049,9 @@
 													class="et_pb_module et_pb_team_member et_pb_team_member_4 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
-														<img width="185" height="200"
-															src="./people/SanjayRanka.jpg"
-															alt="Sanjay Ranka"
-														></div>
+														<img width="185" height="200" src="./people/SanjayRanka.jpg"
+															alt="Sanjay Ranka">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">Sanjay Ranka</h4>
 
@@ -1074,7 +1069,7 @@
 
 									</div>
 
-									
+
 
 
 									<div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
@@ -1108,14 +1103,17 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
-															src="./people/XindongWu.jpg"
-															alt="Xindong Wu"
-															class="wp-image-636"></div>
+															src="./people/XindongWu.jpg" alt="Xindong Wu"
+															class="wp-image-636">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xindong Wu</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xindong
+															Wu</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Professor, Hefei University of Technology </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																Professor, Hefei University of Technology </p>
 														</div>
 
 													</div>
@@ -1123,7 +1121,7 @@
 											</div>
 										</div>
 									</div>
-						 
+
 
 									<div class="et_pb_section et_pb_section_7 et_pb_with_background et_section_regular">
 
@@ -1160,7 +1158,8 @@
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="280" height="280"
 															src="./people/SelcukCandan.jpg" alt="K. Selcuk Candan"
-															class="wp-image-1207"></div>
+															class="wp-image-1207">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">K. Selcuk Candan</h4>
 
@@ -1182,14 +1181,15 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="135" height="135"
-															src="./people/ThangDinh.jpg"
-															alt="Thang N. Dinh"
-															class="wp-image-605"></div>
+															src="./people/ThangDinh.jpg" alt="Thang N. Dinh"
+															class="wp-image-605">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">Thang N. Dinh</h4>
 
 														<div>
-															<p>Associate Professor, Virginia Commonwealth University </p>
+															<p>Associate Professor, Virginia Commonwealth University
+															</p>
 														</div>
 
 													</div>
@@ -1233,14 +1233,16 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
-															src="./people/YichengTu.jpg"
-															alt="Yicheng Tu"
-															class="wp-image-636"></div>
+															src="./people/YichengTu.jpg" alt="Yicheng Tu"
+															class="wp-image-636">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yicheng Tu</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yicheng Tu</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor, University of South Florida</p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor,
+																University of South Florida</p>
 														</div>
 
 													</div>
@@ -1253,7 +1255,7 @@
 
 									</div>
 
-									
+
 
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
@@ -1287,12 +1289,15 @@
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
 															src="./people/YanjieFu.jpg" alt="Yanjie Fu"
-															class="wp-image-324"></div>
+															class="wp-image-324">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yanjie Fu</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yanjie Fu</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, University of Central Florida</p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor,
+																University of Central Florida</p>
 														</div>
 
 													</div>
@@ -1306,7 +1311,7 @@
 									</div>
 
 
-<br>
+									<br>
 
 									<div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
 
@@ -1339,9 +1344,9 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
-															src="./people/JiliangTang.jpg"
-															alt="Jiliang Tang"
-															class="wp-image-636"></div>
+															src="./people/JiliangTang.jpg" alt="Jiliang Tang"
+															class="wp-image-636">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">Jiliang Tang</h4>
 
@@ -1368,7 +1373,8 @@
 
 
 													<div class="et_pb_text_inner">
-														<h2 style="text-align: center;">Open Source Project Forum Chair</h2>
+														<h2 style="text-align: center;">Open Source Project Forum Chair
+														</h2>
 													</div>
 												</div>
 											</div>
@@ -1388,13 +1394,15 @@
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
 															src="./people/VagelisPapalexakis.jpg"
-															alt="Vagelis Papalexakis"
-															class="wp-image-636"></div>
+															alt="Vagelis Papalexakis" class="wp-image-636">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vagelis Papalexakis</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vagelis Papalexakis</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Associate Professor, University of California Riverside </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Associate Professor,
+																University of California Riverside </p>
 														</div>
 
 													</div>
@@ -1403,7 +1411,7 @@
 										</div>
 									</div>
 
-												
+
 
 									<div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
 
@@ -1417,7 +1425,8 @@
 
 
 													<div class="et_pb_text_inner">
-														<h2 style="text-align: center;">Women in Science Research Forum Chair</h2>
+														<h2 style="text-align: center;">Women in Science Research Forum
+															Chair</h2>
 													</div>
 												</div>
 											</div>
@@ -1451,46 +1460,58 @@
 											</div>
 										</div> -->
 										<div class="et_pb_row et_pb_row_18">
-											<div class="et_pb_column et_pb_column_1_2 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough">
-											<div class="et_pb_module et_pb_team_member et_pb_team_member_14 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
-											<div class="et_pb_team_member_image et-waypoint et_pb_animation_off">
-												<img loading="lazy" width="450" height="450"
-													style="height:180px;width:auto;"
-													src="https://www.cerias.purdue.edu/assets/images/people/jing-gao_200.png" alt="Jing Gao"
-												/>		
-										</div>
-											<div class="et_pb_team_member_description">
-												<h4 class="et_pb_module_header">Jing Gao</h4>
-												<div><p>Associate Professor, Purdue University</p></div>
-											</div>
-										</div>
+											<div
+												class="et_pb_column et_pb_column_1_2 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough">
+												<div
+													class="et_pb_module et_pb_team_member et_pb_team_member_14 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
+													<div
+														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
+														<img loading="lazy" width="450" height="450"
+															style="height:180px;width:auto;"
+															src="https://www.cerias.purdue.edu/assets/images/people/jing-gao_200.png"
+															alt="Jing Gao" />
+													</div>
+													<div class="et_pb_team_member_description">
+														<h4 class="et_pb_module_header">Jing Gao</h4>
+														<div>
+															<p>Associate Professor, Purdue University</p>
+														</div>
+													</div>
+												</div>
 
-										</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough et-last-child">
-											<div class="et_pb_module et_pb_team_member et_pb_team_member_8 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
-											<div class="et_pb_team_member_image et-waypoint et_pb_animation_off">
-												<img loading="lazy" width="410" height="410"
-													style="height:180px;width:auto;"
-													src="https://faculty.sites.iastate.edu/qli/files/styles/profile_picture/public/2019-09/thumbnail_Qi%20Li.jpg?itok=7zrsHInm" alt="Qi Li"/>
 											</div>
-											<div class="et_pb_team_member_description">
-												<h4 class="et_pb_module_header">Qi Li</h4>
-												<div><p>Assistant Professor, Iowa State University</p></div>
-												
+											<div
+												class="et_pb_column et_pb_column_1_2 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough et-last-child">
+												<div
+													class="et_pb_module et_pb_team_member et_pb_team_member_8 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
+													<div
+														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
+														<img loading="lazy" width="410" height="410"
+															style="height:180px;width:auto;"
+															src="https://faculty.sites.iastate.edu/qli/files/styles/profile_picture/public/2019-09/thumbnail_Qi%20Li.jpg?itok=7zrsHInm"
+															alt="Qi Li" />
+													</div>
+													<div class="et_pb_team_member_description">
+														<h4 class="et_pb_module_header">Qi Li</h4>
+														<div>
+															<p>Assistant Professor, Iowa State University</p>
+														</div>
+
+													</div>
+												</div>
 											</div>
-										</div>
-										</div>
-											
-											
-											
-											
+
+
+
+
 										</div>
 									</div>
 
 
 
 
-												
-<br><br>
+
+									<br><br>
 
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
@@ -1524,12 +1545,15 @@
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
 															src="./people/ShiruiPan.jpg" alt="Shirui Pan"
-															class="wp-image-324"></div>
+															class="wp-image-324">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shirui Pan</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shirui Pan</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor, Griffith University, Australia </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor, Griffith
+																University, Australia </p>
 														</div>
 
 													</div>
@@ -1542,7 +1566,7 @@
 
 									</div>
 
-<br>
+									<br>
 
 									<div class="et_pb_section et_pb_section_1 et_pb_with_background et_section_regular">
 
@@ -1578,8 +1602,9 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
-															src="./people/AlbertBifet.jpeg"
-															alt="Albert Bifet" class="wp-image-632"></div>
+															src="./people/AlbertBifet.jpeg" alt="Albert Bifet"
+															class="wp-image-632">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">Albert Bifet</h4>
 
@@ -1601,8 +1626,9 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="145" height="145"
-															src="./people/YufeiTang.jpg"
-															alt="Yufei Tang" class="wp-image-633"></div>
+															src="./people/YufeiTang.jpg" alt="Yufei Tang"
+															class="wp-image-633">
+													</div>
 													<div class="et_pb_team_member_description">
 														<h4 class="et_pb_module_header">Yufei Tang</h4>
 
@@ -1620,7 +1646,7 @@
 
 									</div>
 
-<br>
+									<br>
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
 
@@ -1653,12 +1679,15 @@
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
 															src="./people/WeiShinnKu.jpg" alt="Wei-Shinn Ku"
-															class="wp-image-324"></div>
+															class="wp-image-324">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wei-Shinn Ku</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wei-Shinn Ku</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor, Auburn University </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Professor, Auburn
+																University </p>
 														</div>
 
 													</div>
@@ -1671,7 +1700,7 @@
 
 									</div>
 
-<br><br><br>
+									<br><br><br>
 
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
@@ -1704,13 +1733,15 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
-															src="./people/JiaWu.webp" alt="Jia Wu"
-															class="wp-image-324"></div>
+															src="./people/JiaWu.webp" alt="Jia Wu" class="wp-image-324">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jia Wu</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jia Wu</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senior Lecture, Macquarie University, Australia </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senior Lecture, Macquarie
+																University, Australia </p>
 														</div>
 
 													</div>
@@ -1723,8 +1754,8 @@
 
 									</div>
 
-									
-<br><br><br>
+
+									<br><br><br>
 
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
@@ -1757,13 +1788,15 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
-															src="./people/YiHE.jpg" alt="Yi He"
-															class="wp-image-324"></div>
+															src="./people/YiHE.jpg" alt="Yi He" class="wp-image-324">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yi He</h4>
+														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yi
+															He</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, Old Dominion University </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, Old
+																Dominion University </p>
 														</div>
 
 													</div>
@@ -1777,7 +1810,59 @@
 									</div>
 
 
-<br><br><br><br>
+									<br><br><br><br>
+
+									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
+
+										<div class="et_pb_row et_pb_row_6">
+											<div
+												class="et_pb_column et_pb_column_4_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+												<div
+													class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+													<div class="et_pb_text_inner">
+														<h2 style="text-align: center;">Award Committee Chair</h2>
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+										<div class="et_pb_row et_pb_row_7">
+											<div
+												class="et_pb_column et_pb_column_4_4 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+												<div
+													class="et_pb_module et_pb_team_member et_pb_team_member_7 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
+
+
+													<div
+														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
+														<img loading="lazy" width="200" height="200"
+															src="https://people.engineering.osu.edu/sites/default/files/styles/coe_3_4_medium/public/2020-07/Xia-Ning350SQ.png" alt="Zhe Jiang"
+															class="wp-image-324">
+													</div>
+													<div class="et_pb_team_member_description">
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xia Ning</h4>
+
+														<div>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Associate Professor,
+																Ohio State University </p>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+
+										</div>
+
+
+									</div>
 
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
@@ -1811,12 +1896,15 @@
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
 															src="./people/ZheJiang.jpg" alt="Zhe Jiang"
-															class="wp-image-324"></div>
+															class="wp-image-324">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zhe Jiang</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zhe Jiang</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, University of Florida </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor,
+																University of Florida </p>
 														</div>
 
 													</div>
@@ -1828,8 +1916,8 @@
 
 
 									</div>
-									
-<br><br><br><br>
+
+									<br><br><br><br>
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
 
@@ -1862,12 +1950,15 @@
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off">
 														<img loading="lazy" width="200" height="200"
 															src="./people/hcgao.jpg" alt="Hongchang Gao"
-															class="wp-image-324"></div>
+															class="wp-image-324">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hongchang Gao</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hongchang Gao</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, Temple University</p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, Temple
+																University</p>
 														</div>
 
 													</div>
@@ -1881,7 +1972,7 @@
 									</div>
 
 
-<br>
+									<br>
 
 									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
 
@@ -1914,13 +2005,16 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
-															src="./people/UdayKiran.jpg"
-															alt="R.Uday Kiran" class="wp-image-632"></div>
+															src="./people/UdayKiran.jpg" alt="R.Uday Kiran"
+															class="wp-image-632">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R.Uday Kiran</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R.Uday Kiran</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Associate Professor, The University of Aizu </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Associate Professor, The
+																University of Aizu </p>
 														</div>
 
 													</div>
@@ -1939,13 +2033,16 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
-															src="./people/MengFang.jpeg"
-															alt="Meng Fang" class="wp-image-632"></div>
+															src="./people/MengFang.jpeg" alt="Meng Fang"
+															class="wp-image-632">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meng Fang</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meng Fang</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor, Eindhoven University of Technology  </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assistant Professor,
+																Eindhoven University of Technology </p>
 														</div>
 
 													</div>
@@ -1964,13 +2061,16 @@
 													<div
 														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
 														<img loading="lazy" width="200" height="200"
-															src="./people/MinShi.jpg"
-															alt="Min Shi" class="wp-image-632"></div>
+															src="./people/MinShi.jpg" alt="Min Shi"
+															class="wp-image-632">
+													</div>
 													<div class="et_pb_team_member_description">
-														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Min Shi</h4>
+														<h4 class="et_pb_module_header">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Min Shi</h4>
 
 														<div>
-															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Harvard University Postdoctoral Fellow </p>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Harvard University
+																Postdoctoral Fellow </p>
 														</div>
 
 													</div>
@@ -1984,60 +2084,63 @@
 
 									</div>
 
-<br>
+									<br>
 
-<br>
+									<br>
 
 
 
-								<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
-									<div class="et_pb_row et_pb_row_22">
-										<div
-											class="et_pb_column et_pb_column_4_4 et_pb_column_29  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
+									<div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular">
+										<div class="et_pb_row et_pb_row_22">
 											<div
-												class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+												class="et_pb_column et_pb_column_4_4 et_pb_column_29  et_pb_css_mix_blend_mode_passthrough et-last-child">
 
-												<div class="et_pb_text_inner">
-													<br><br>
-													<h2 style="text-align: center;">Web Master
-													</h2>
+												<div
+													class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+
+													<div class="et_pb_text_inner">
+														<br><br>
+														<h2 style="text-align: center;">Web Master
+														</h2>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="et_pb_row et_pb_row_7">
-										<div
-											class="et_pb_column et_pb_column_4_4 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
-
-
+										<div class="et_pb_row et_pb_row_7">
 											<div
-												class="et_pb_module et_pb_team_member et_pb_team_member_19 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
+												class="et_pb_column et_pb_column_4_4 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
 
 
 												<div
-													class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
-													<img loading="lazy" width="200" height="200"
-														src="./people/MinhPham.jpg"
-														alt="R.Uday Kiran" class="wp-image-632"></div>
-												<div class="et_pb_team_member_description">
-													<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;Minh Pham</h4>
+													class="et_pb_module et_pb_team_member et_pb_team_member_19 et_clickable clearfix  et_pb_text_align_center et_pb_bg_layout_light">
 
-													<div>
-														<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University of South Florida </p>
+
+													<div
+														class="et_pb_team_member_image et-waypoint et_pb_animation_off et-animated">
+														<img loading="lazy" width="200" height="200"
+															src="./people/MinhPham.jpg" alt="R.Uday Kiran"
+															class="wp-image-632">
 													</div>
+													<div class="et_pb_team_member_description">
+														<h4 class="et_pb_module_header">&nbsp;&nbsp;&nbsp;&nbsp;Minh
+															Pham</h4>
 
+														<div>
+															<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;University of South Florida
+															</p>
+														</div>
+
+													</div>
 												</div>
 											</div>
 										</div>
+
 									</div>
-
 								</div>
+
+
 							</div>
-
-
 						</div>
-					</div>
 
 
 				</article>
@@ -2056,7 +2159,7 @@
 	</div>
 
 	<script type="text/javascript">
-		var et_link_options_data = [{ "class": "et_pb_team_member_0", "url": "https://www.cise.ufl.edu/~mythai/", "target": "_blank" }, { "class": "et_pb_team_member_1", "url": "http://www.ar.sanken.osaka-u.ac.jp/~washio/washpreg.html", "target": "_blank" }, { "class": "et_pb_row_3", "url": "http:\/\/xwu.bigke.org\/", "target": "_self" }, { "class": "et_pb_team_member_2", "url": "https://www.cse.msu.edu/~tangjili/", "target": "_blank" }, { "class": "et_pb_team_member_3", "url": "https://www.cse.fau.edu/~xqzhu/", "target": "_blank" }, { "class": "et_pb_team_member_4", "url": "https://www.cise.ufl.edu/ranka-sanjay/", "target": "_blank" }, { "class": "et_pb_team_member_5", "url": "https://www.cs.ucf.edu/person/yanjie-fu/", "target": "_blank" }, { "class": "et_pb_team_member_6", "url": "https://www.csee.usf.edu/~tuy/", "target": "_blank" }, { "class": "et_pb_team_member_7", "url": "", "target": "_blank" }, { "class": "et_pb_team_member_8", "url": "https://faculty.sites.iastate.edu/qli/", "target": "_blank" }, { "class": "et_pb_team_member_9", "url": "https:\/\/egarciamartin.github.io\/", "target": "_blank" }, { "class": "et_pb_team_member_10", "url": "http://aria.asu.edu/candan/", "target": "_blank" }, { "class": "et_pb_team_member_11", "url": "http://www.people.vcu.edu/~tndinh/", "target": "_blank" }, { "class": "et_pb_team_member_12", "url": "", "target": "_blank" }, { "class": "et_pb_team_member_13", "url": "https:\/\/www.tue.nl\/en\/research\/researchers\/mykola-pechenizkiy\/", "target": "_blank" }, { "class": "et_pb_team_member_14", "url": "https://www.cerias.purdue.edu/site/people/faculty/view/3344", "target": "_blank" }, { "class": "et_pb_team_member_15", "url": "http://xwu.zhonghuapu.com/", "target": "_blank" }, { "class": "et_pb_team_member_16", "url": "https://scholar.google.com/citations?user=NoA9KFIAAAAJ&hl=en", "target": "_blank" }, { "class": "et_pb_team_member_17", "url": "https://mengf1.github.io/", "target": "_blank" }, { "class": "et_pb_team_member_18", "url": "https://www.u-aizu.ac.jp/research/faculty/detail?lng=en&cd=90130", "target": "_blank" }, { "class": "et_pb_team_member_19", "url": "https://minhhpham.github.io/", "target": "_blank" }, { "class": "et_pb_team_member_20", "url": "https://www.jiangteam.org/index.html", "target": "_blank" }, { "class": "et_pb_team_member_21", "url": "https://scholar.google.com/citations?user=DKqpGaUAAAAJ&hl=en", "target": "_blank" }, { "class": "et_pb_team_member_22", "url": "https://researchers.mq.edu.au/en/persons/jia-wu", "target": "_blank" }, { "class": "et_pb_team_member_23", "url": "https://www.eng.auburn.edu/~weishinn/", "target": "_blank" }, { "class": "et_pb_team_member_24", "url": "https://faculty.eng.fau.edu/tangy/", "target": "_blank" }, { "class": "et_pb_team_member_25", "url": "https://albertbifet.com/", "target": "_blank" }, { "class": "et_pb_team_member_26", "url": "https://shiruipan.github.io/", "target": "_blank" }, { "class": "et_pb_team_member_27", "url": "", "target": "_blank" }, { "class": "et_pb_team_member_28", "url": "https://www.cs.ucr.edu/~epapalex/", "target": "_blank" }, { "class": "et_pb_team_member_29", "url": "https://www.cst.temple.edu/~tuo14379/", "target": "_blank" }];
+		var et_link_options_data = [{ "class": "et_pb_team_member_0", "url": "https://www.cise.ufl.edu/~mythai/", "target": "_blank" }, { "class": "et_pb_team_member_1", "url": "http://www.ar.sanken.osaka-u.ac.jp/~washio/washpreg.html", "target": "_blank" }, { "class": "et_pb_row_3", "url": "http:\/\/xwu.bigke.org\/", "target": "_self" }, { "class": "et_pb_team_member_2", "url": "https://www.cse.msu.edu/~tangjili/", "target": "_blank" }, { "class": "et_pb_team_member_3", "url": "https://www.cse.fau.edu/~xqzhu/", "target": "_blank" }, { "class": "et_pb_team_member_4", "url": "https://www.cise.ufl.edu/ranka-sanjay/", "target": "_blank" }, { "class": "et_pb_team_member_5", "url": "https://www.cs.ucf.edu/person/yanjie-fu/", "target": "_blank" }, { "class": "et_pb_team_member_6", "url": "https://www.csee.usf.edu/~tuy/", "target": "_blank" }, { "class": "et_pb_team_member_7", "url": "https://cse.osu.edu/people/ning.104", "target": "_blank" }, { "class": "et_pb_team_member_8", "url": "https://faculty.sites.iastate.edu/qli/", "target": "_blank" }, { "class": "et_pb_team_member_9", "url": "https:\/\/egarciamartin.github.io\/", "target": "_blank" }, { "class": "et_pb_team_member_10", "url": "http://aria.asu.edu/candan/", "target": "_blank" }, { "class": "et_pb_team_member_11", "url": "http://www.people.vcu.edu/~tndinh/", "target": "_blank" }, { "class": "et_pb_team_member_12", "url": "", "target": "_blank" }, { "class": "et_pb_team_member_13", "url": "https:\/\/www.tue.nl\/en\/research\/researchers\/mykola-pechenizkiy\/", "target": "_blank" }, { "class": "et_pb_team_member_14", "url": "https://www.cerias.purdue.edu/site/people/faculty/view/3344", "target": "_blank" }, { "class": "et_pb_team_member_15", "url": "http://xwu.zhonghuapu.com/", "target": "_blank" }, { "class": "et_pb_team_member_16", "url": "https://scholar.google.com/citations?user=NoA9KFIAAAAJ&hl=en", "target": "_blank" }, { "class": "et_pb_team_member_17", "url": "https://mengf1.github.io/", "target": "_blank" }, { "class": "et_pb_team_member_18", "url": "https://www.u-aizu.ac.jp/research/faculty/detail?lng=en&cd=90130", "target": "_blank" }, { "class": "et_pb_team_member_19", "url": "https://minhhpham.github.io/", "target": "_blank" }, { "class": "et_pb_team_member_20", "url": "https://www.jiangteam.org/index.html", "target": "_blank" }, { "class": "et_pb_team_member_21", "url": "https://scholar.google.com/citations?user=DKqpGaUAAAAJ&hl=en", "target": "_blank" }, { "class": "et_pb_team_member_22", "url": "https://researchers.mq.edu.au/en/persons/jia-wu", "target": "_blank" }, { "class": "et_pb_team_member_23", "url": "https://www.eng.auburn.edu/~weishinn/", "target": "_blank" }, { "class": "et_pb_team_member_24", "url": "https://faculty.eng.fau.edu/tangy/", "target": "_blank" }, { "class": "et_pb_team_member_25", "url": "https://albertbifet.com/", "target": "_blank" }, { "class": "et_pb_team_member_26", "url": "https://shiruipan.github.io/", "target": "_blank" }, { "class": "et_pb_team_member_27", "url": "", "target": "_blank" }, { "class": "et_pb_team_member_28", "url": "https://www.cs.ucr.edu/~epapalex/", "target": "_blank" }, { "class": "et_pb_team_member_29", "url": "https://www.cst.temple.edu/~tuo14379/", "target": "_blank" }];
 	</script>
 	<style>
 		#footer-content-eb,
@@ -2383,7 +2486,7 @@
 
 		.et_pb_team_member_26.et_pb_team_member .et_pb_team_member_image,
 		.et_pb_team_member_20.et_pb_team_member .et_pb_team_member_image,
-		.et_pb_team_member_29.et_pb_team_member .et_pb_team_member_image,		
+		.et_pb_team_member_29.et_pb_team_member .et_pb_team_member_image,
 		.et_pb_team_member_24.et_pb_team_member .et_pb_team_member_image,
 		.et_pb_team_member_21.et_pb_team_member .et_pb_team_member_image,
 		.et_pb_team_member_19.et_pb_team_member .et_pb_team_member_image,
@@ -2503,7 +2606,7 @@
 		.et_pb_team_member_9.et_pb_team_member,
 		.et_pb_team_member_17.et_pb_team_member,
 		.et_pb_team_member_20.et_pb_team_member,
-		.et_pb_team_member_29.et_pb_team_member,		
+		.et_pb_team_member_29.et_pb_team_member,
 		.et_pb_team_member_22.et_pb_team_member,
 		.et_pb_team_member_11.et_pb_team_member,
 		.et_pb_team_member_14.et_pb_team_member,
@@ -2574,7 +2677,7 @@
 
 	<!-- display organization as current page on navbar -->
 	<script>
-		$(document).ready(function(){ 
+		$(document).ready(function () {
 			document.getElementById('navbar-org').classList.add("current-menu-item");
 			document.getElementById('navbar-org').classList.add("current_page_item");
 		})
